@@ -10,7 +10,11 @@ app.use(function(req, res, next) {
     next();
 });
 
+var port = 80;
+if (process.env.APP_SERVER_PORT)
+    port = process.env.APP_SERVER_PORT;
+
 app.use("/", lolRouter);
 
 
-app.listen(8080, () => console.log("Listening on port 8080.."));
+app.listen(port, () => console.log("Listening on port " + port));
