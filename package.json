@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server/index.js",
+    "start": "node src/server/js/index.js",
     "server": "nodemon src/server/js/index.js",
     "client": "webpack-dev-server --open --mode development",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
